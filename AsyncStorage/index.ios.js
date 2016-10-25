@@ -10,7 +10,8 @@ import React, {
 import {
 	AppRegistry,
 	StyleSheet,
-	NavigatorIOS
+	NavigatorIOS,
+	ActionSheetIOS
 } from 'react-native';
 
 import Cart from './component/cart';
@@ -21,8 +22,15 @@ export default class Demo extends Component {
 
 	render() {
 		return (
-			<NavigatorIOS style={{flex: 1}} initialRoute={{component: List, title: '水果列表'}} />
+			<NavigatorIOS style={{flex: 1}} ref='nav' initialRoute={{component: List, title: '水果列表', rightButtonTitle:'购物车', onRightButtonPress: () => this.rightButtonClick()}} />
 		);
+	}
+
+	rightButtonClick() {
+		this.refs.nav.push({
+			component: Cart,
+			title: '购物车'
+		});
 	}
 }
 
