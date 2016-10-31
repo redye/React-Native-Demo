@@ -45,7 +45,7 @@ export default class Demo extends Component {
                 selected={this.state.selectedTab === '音乐'} 
                 icon={require('./image/music.png')} 
                 onPress={this._tabPress.bind(this, '音乐')}>
-                <View style={{backgroundColor: '#0f0'}}></View>
+                <Navigation component={Music} />
                 </TabBarIOS.Item>
 
                 <TabBarIOS.Item 

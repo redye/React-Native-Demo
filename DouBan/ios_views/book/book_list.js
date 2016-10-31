@@ -43,11 +43,7 @@ export default class BookList extends Component {
 				</View>
 				{
 					this.state.show ?
-					<ListView dataSource={this.state.dataSource} renderRow={(row) => {
-						return (
-							<BookItem row={row} onPress={() => this._loadPage(this, row.id)} />
-						);
-					}} />
+					<ListView dataSource={this.state.dataSource} renderRow={(row) => this._renderRow(row)} />
 					: Util.loading
 				}
 			</ScrollView>
@@ -70,7 +66,7 @@ export default class BookList extends Component {
 
 	_renderRow(row) {
 		return (
-			<BookItem row={row} onPress={this._loadPage.bind(this, row.id)} />
+			<BookItem row={row} onPress={() => this._loadPage(row.id)} />
 		);
 	}
 

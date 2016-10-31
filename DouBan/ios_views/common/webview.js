@@ -17,7 +17,7 @@ import Header from './header'
 export default class WebViewYH extends Component {
 	render() {
 		return (
-			<View>
+			<View style={{backgroundColor: '#fff'}}>
 				<Header navigator={this.props.navigator} initObj={{backName: this.props.backName, title: this.props.title}} />
 				<WebView contentInset={{top: -40}} startInLoadingState={true} 
 				style={{width: Util.size.width, height: Util.size.height-50}} source={{uri: this.props.url}}>

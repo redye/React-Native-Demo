@@ -50,7 +50,6 @@ export default class MovieList extends Component {
 
 	_renderRow(row) {
 		return (
-			// <MovieItem movie={row} onPress={this._goDouBan.bind(this, row.title, row.alt)} />
 			<MovieItem movie={row} onPress={() => this._goDouBan(row.title, row.alt)} />
 		);
 	}

@@ -22,6 +22,7 @@ export default class MovieItem extends Component {
 		for (var i in casts) {
 			names.push(casts[i].name);
 		}
+		names = names.join('，');
 		return (
 			<View style={[styles.row, styles.item]}>
 				<View>
