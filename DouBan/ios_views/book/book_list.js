@@ -38,17 +38,14 @@ export default class BookList extends Component {
 			<ScrollView style={[styles.flex]}>
 				<View style={[styles.search, styles.row]}>
 					<View style={styles.flex}>
-						<Search placeholder="请输入图书的名称" onChangeText={(val) => this._changeText()} />
+						<Search placeholder="请输入图书的名称" onChangeText={(val) => this._changeText(val)} onPress={() => this._search()} />
 					</View>
-					<TouchableOpacity style={styles.btn} onPress={() => search}>
-						<Text style={styles.fontFFF}>搜索</Text>
-					</TouchableOpacity>
 				</View>
 				{
 					this.state.show ?
 					<ListView dataSource={this.state.dataSource} renderRow={(row) => {
 						return (
-							<BookItem row={row} onPress={this._loadPage.bind(this, row.id)} />
+							<BookItem row={row} onPress={() => this._loadPage(this, row.id)} />
 						);
 					}} />
 					: Util.loading
@@ -119,12 +116,6 @@ const styles = StyleSheet.create({
 		paddingLeft: 5,
 		paddingRight: 5,
 		height: 45
-	},
-	btn: {
-		width: 50,
-		backgroundColor: '#0091ff',
-		justifyContent: 'center',
-		alignItems: 'center'
 	},
 	fontFFF: {
 		color: '#fff'

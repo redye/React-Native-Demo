@@ -17,8 +17,8 @@ import {
 
 import Navigation from './ios_views/common/navigation';
 import Book from './ios_views/book/book_list';
-// import Music from './ios_views/music/music_list';
-// import Movie from './ios_views/movie/movie_list';
+import Music from './ios_views/music/music_list';
+import Movie from './ios_views/movie/movie_list';
 
 export default class Demo extends Component {
     constructor(props) {
@@ -53,7 +53,7 @@ export default class Demo extends Component {
                 selected={this.state.selectedTab === '电影'} 
                 icon={require('./image/movie.png')} 
                 onPress={this._tabPress.bind(this, '电影')}>
-                <View style={{backgroundColor: '#00f'}}></View>
+                <Navigation component={Movie} />
                 </TabBarIOS.Item>
             </TabBarIOS>
         );
