@@ -185,11 +185,11 @@ export default class Day extends Component {
 				});
 				countingTime = this.state.timeAccumulation + this.state.currentTime - this.state.intialTime;
 				minute = Math.floor(countingTime / (60 * 1000));
-				second = Math.floor((countingTime - 6000 * minute) / 1000);
+				second = Math.floor((countingTime - 60000 * minute) / 1000);
 				milSecond = Math.floor((countingTime % 1000) / 10);
 				seccountingTime = countingTime - this.state.recordTime;
 				secminute = Math.floor(seccountingTime / (60 * 1000));
-				secsecond = Math.floor((seccountingTime - 6000 * secminute) / 1000);
+				secsecond = Math.floor((seccountingTime - 60000 * secminute) / 1000);
 				secmilSecod = Math.floor((seccountingTime % 1000) / 10);
 				this.setState({
 					totalTime: (minute<10? '0'+minute:minute)+':'+(second<10?'0'+second:second)+'.'+(milSecond<10?'0'+milSecond:milSecond),
