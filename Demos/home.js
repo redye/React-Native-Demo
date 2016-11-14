@@ -411,7 +411,7 @@ export default class Home extends Component {
 					<TouchableOpacity 
 					underlayColor='transparent'
 					onPress={() => {if (index > 0) {navigator.pop()}}}>
-						<Text style={styles.navBackBtn}><Icon size={15} name='ios-arrow-back'></Icon> back</Text>
+						<Text style={styles.navBackBtn}><Icon size={15} name='ios-arrow-back'></Icon> Back</Text>
 					</TouchableOpacity>
 				);
 			} else {
