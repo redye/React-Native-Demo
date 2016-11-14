@@ -36,22 +36,13 @@ export default class Navigation extends Component {
 					return (
 						<View style={{flex: 1}}>
 						<RComponent navigator={navigator} route={route} {...route.passProps} />
-					</View>
-					);
+					</View>);
 				}
 			}
 			/>
 		);
 	}
 
-	// renderScene(route, navigator) {
-	// 	const RComponent = route.component;
-	// 	return (
-	// 		<View style={{flex: 1}}>
-	// 			<RComponent navigator={navigator} route={route} {...route.passProps} />
-	// 		</View>
-	// 	);
-	// }
 }
 
 const styles = StyleSheet.create({
