@@ -11,7 +11,7 @@ import {
 
 import Home from './home';
 
-export default class Demo extends Component {
+export default class Demos extends Component {
   render() {
     return (
         <Home />
@@ -21,4 +21,4 @@ export default class Demo extends Component {
 
 
 
-AppRegistry.registerComponent('Demo', () => Demo);
+AppRegistry.registerComponent('Demos', () => Demos);

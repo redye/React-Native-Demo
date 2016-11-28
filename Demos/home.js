@@ -369,7 +369,7 @@ class MainView extends Component {
 					<View style={styles.slide}>
 						<TouchableHighlight onPress={() => that._jumpToDay(1)}>
 							<View style={styles.slide}>
-								<Image style={styles.image} source={{uri: 'day2'}} />
+								<Image style={styles.image} source={require('./image/day2.png')} />
 								<Text style={styles.slideText}>Day2: Weather</Text>
 							</View>
 						</TouchableHighlight>

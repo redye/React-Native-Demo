@@ -1,9 +1,10 @@
-package com.demo;
+package com.demos;
 
 import com.facebook.react.ReactActivity;
-import com.BV.LinearGradient.LinearGradientPackage;
+import com.cmcewen.blurview.BlurViewPackage;
 import com.brentvatne.react.ReactVideoPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
+import com.BV.LinearGradient.LinearGradientPackage;
 
 public class MainActivity extends ReactActivity {
 
@@ -13,6 +14,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "Demo";
+        return "Demos";
     }
 }
