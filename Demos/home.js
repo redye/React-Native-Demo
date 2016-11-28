@@ -354,20 +354,26 @@ class MainView extends Component {
 		});
 		return (
 			<ScrollView style={styles.mainView} title={this.props.title}>
-				<Swiper height={150} showsButtons={false} autoplay={true} 
-				activeDot={<View style={{backgroundColor: 'rgba(255,255,255,0.8)', width: 8, height: 8, borderRadius: 4, marginTop: 3, marginLeft: 3, marginBottom: 3, marginRight: 3}}></View>}>
-					<TouchableHighlight onPress={() => that._jumpToDay(0)}>
-						<View style={styles.slide}>
-							<Image style={styles.image} source={require('./image/day1.png')} />
-							<Text style={styles.slideText}>Day1: Timer</Text>
-						</View>
-					</TouchableHighlight>
-					<TouchableHighlight onPress={() => that._jumpToDay(1)}>
-						<View style={styles.slide}>
-							<Image style={styles.image} source={{uri: 'day2'}} />
-							<Text style={styles.slideText}>Day2: Weather</Text>
-						</View>
-					</TouchableHighlight>
+				<Swiper height={150} showsButtons={false} autoplay={true}
+					dot={<View style={{backgroundColor: 'rgba(255,0,0,0.2)', width: 8, height: 8, borderRadius: 4, marginTop: 3, marginLeft: 3, marginBottom: 3, marginRight: 3}}></View>}
+					activeDot={<View style={{backgroundColor: 'rgba(255,0,0,1)', width: 8, height: 8, borderRadius: 4, marginTop: 3, marginLeft: 3, marginBottom: 3, marginRight: 3}}></View>}
+				>
+					<View style={styles.slide}>
+						<TouchableHighlight onPress={() => that._jumpToDay(0)}>
+							<View style={styles.slide}>
+								<Image style={styles.image} source={require('./image/day1.png')} />
+								<Text style={styles.slideText}>Day1: Timer</Text>
+							</View>
+						</TouchableHighlight>
+					</View>
+					<View style={styles.slide}>
+						<TouchableHighlight onPress={() => that._jumpToDay(1)}>
+							<View style={styles.slide}>
+								<Image style={styles.image} source={{uri: 'day2'}} />
+								<Text style={styles.slideText}>Day2: Weather</Text>
+							</View>
+						</TouchableHighlight>
+					</View>
 				</Swiper>
 				<View style={styles.touchBoxContainer}>
 					{boxs}
@@ -515,7 +521,7 @@ const styles = StyleSheet.create({
  		flex: 1,
  		height: 150,
  		justifyContent: 'center',
- 		alignItems: 'center'
+ 		alignItems: 'center',
  	},
  	slideText: {
  		position: 'absolute',
@@ -525,13 +531,13 @@ const styles = StyleSheet.create({
  		backgroundColor: "rgba(255,255, 255, 0.5)",
  		width: Util.size.width,
  		textAlign: 'center',
- 		fontSize: 12
+ 		fontSize: 12,
  	},
  	image: {
  		width: Util.size.width,
  		flex: 1,
  		alignSelf: 'stretch',
- 		resizeMode: Image.resizeMode.contain
+ 		resizeMode: Image.resizeMode.contain,
  	}
 });
 

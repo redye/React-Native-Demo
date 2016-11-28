@@ -53,8 +53,9 @@ export default class Search extends Component {
 			<View style={styles.flex}>
 				<View style={[styles.flexDirection, styles.inputHeight]}>
 	                <View style={styles.flex}>
-	                    <TextInput 
+	                    <TextInput
 		                    style={styles.input} 
+		                    autoFocus={true}
 		                    returnKeyType='search' 
 		                    placeholder='请输入关键字'
 		                    onEndEditing={this.hide.bind(this, this.state.value)}
