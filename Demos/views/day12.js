@@ -47,12 +47,14 @@ const chartData3 = [
 ];
 
 
-const data = [[
+const data = [
     [0, 1],
     [1, 3],
     [3, 7],
     [4, 9],
-]];
+];
+
+const color = ['#e1cd00'];
 
 export default class Day extends Component {
 	render() {
@@ -64,8 +66,9 @@ export default class Day extends Component {
 						style={styles.chart}
                     	data={data}
                     	verticalGridStep={5}
-                    	type="line"
-                    	showDataPoint={true}
+                    	type="bar"
+                    	showDataPoint={false}
+						color={color}
                     />
 				</View>
 			</ScrollView>
